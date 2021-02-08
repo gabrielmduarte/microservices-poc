@@ -1,0 +1,6 @@
+com/gabrielduarte/service/UserService.java
+ com.gabrielduarte.service.UserService
+com/gabrielduarte/UserApiApplication.java
+ com.gabrielduarte.UserApiApplication
+com/gabrielduarte/controller/UserController.java
+ com.gabrielduarte.controller.UserController

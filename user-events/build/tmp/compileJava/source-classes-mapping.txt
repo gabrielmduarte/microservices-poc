@@ -1,0 +1,16 @@
+com/gabrielduarte/domain/UserEntity.java
+ com.gabrielduarte.domain.UserEntity
+com/gabrielduarte/UserEventApplication.java
+ com.gabrielduarte.UserEventApplication
+com/gabrielduarte/consumer/KafkaConsumer.java
+ com.gabrielduarte.consumer.KafkaConsumer
+com/gabrielduarte/repository/UserRepository.java
+ com.gabrielduarte.repository.UserRepository
+com/gabrielduarte/cotroller/UserController.java
+ com.gabrielduarte.cotroller.UserController
+com/gabrielduarte/domain/dto/UserDTO.java
+ com.gabrielduarte.domain.dto.UserDTO
+com/gabrielduarte/service/UserService.java
+ com.gabrielduarte.service.UserService
+com/gabrielduarte/feign/UserConsumer.java
+ com.gabrielduarte.feign.UserConsumer
