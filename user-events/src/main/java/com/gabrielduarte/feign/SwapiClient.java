@@ -6,11 +6,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Repository
-@FeignClient(url = "https://swapi.dev/api/people/", name = "starWars")
-public interface UserConsumer {
+@FeignClient(url = "https://swapi.dev/api/people/", name = "swapi")
+public interface SwapiClient {
 
-    @RequestMapping("{id}/")
+    @RequestMapping("/{id}")
     UserDTO getCharacterById(@PathVariable String id);
 
 }

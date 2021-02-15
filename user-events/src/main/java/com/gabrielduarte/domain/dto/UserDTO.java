@@ -23,19 +23,16 @@ public class UserDTO {
 
     private String url;
 
-    public static UserEntity toEntity(UserDTO dto, String idString) {
+    public static UserEntity toEntity(final UserDTO dto, final String idString) {
         UserEntity entity = new UserEntity();
-        long id = Long.parseLong(idString);
-        long height = Long.parseLong(dto.getHeight());
-        long mass = Long.parseLong(dto.getMass());
 
-        entity.setId(id);
+        entity.setId(Long.parseLong(idString));
         entity.setName(dto.getName());
-        entity.setHeight(height);
-        entity.setMass(mass);
+        entity.setHeight(Long.parseLong(dto.getHeight()));
+        entity.setMass(Long.parseLong(dto.getMass()));
         entity.setHairColor(dto.getHairColor());
         entity.setSkinColor(dto.getSkinColor());
-        entity.setGender(dto.gender);
+        entity.setGender(dto.getGender());
         entity.setUrl(dto.getUrl());
 
         return entity;
