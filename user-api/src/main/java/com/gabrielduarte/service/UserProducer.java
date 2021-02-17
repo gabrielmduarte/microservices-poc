@@ -9,15 +9,18 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserProducer {
 
     @Value("${topic.name.producer}")
     private String topicName;
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 
-    public void send(String message) {
-        log.info("Id enviado: {}", message);
+    public void send(final String message) {
+        log.info("Enviando: {}", message);
+
         kafkaTemplate.send(topicName, message);
+
+        log.info("Id enviado: {}", message);
     }
 }
