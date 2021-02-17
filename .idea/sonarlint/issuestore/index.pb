@@ -3,8 +3,6 @@ E
 user-api/build.gradle,c/8/c82947df58c9bc1feb132fe62f872bffd77fa83f
 ?
 settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
-q
-Auser-api/src/main/java/com/gabrielduarte/service/UserService.java,8/a/8a68b3cca1bb13bea8989fccc212990a2f08fb6c
 w
 Guser-api/src/main/java/com/gabrielduarte/controller/UserController.java,f/4/f424c86d7d1af3bfc8e1c7c6b6b64047ffe52581
 H
@@ -13,8 +11,6 @@ p
 @user-api/src/main/java/com/gabrielduarte/UserApiApplication.java,e/4/e4018d3425b4880b27f7de59be4b17ec669767ad
 u
 Euser-events/src/main/java/com/gabrielduarte/UserEventApplication.java,f/c/fce216e958559eda320adc1a8bf36a64a5bc3c13
-s
-Cuser-events/src/main/java/com/gabrielduarte/feign/UserConsumer.java,7/c/7c5e470a2fbd6735d0cc96f37212bb1496ea7f0c
 z
 Juser-events/src/main/java/com/gabrielduarte/repository/UserRepository.java,a/2/a2151d519fadd2e85febeb5dff1afd283ce00cca
 t
@@ -23,7 +19,5 @@ r
 Buser-events/src/main/java/com/gabrielduarte/domain/UserEntity.java,9/2/9267e4d1a39fd64f223d4393ca8d44b0206be55e
 y
 Iuser-events/src/main/java/com/gabrielduarte/cotroller/UserController.java,6/d/6d57d4a033f3c09712c31d66187bc9866407754d
-w
-Guser-events/src/main/java/com/gabrielduarte/consumer/KafkaConsumer.java,8/f/8fa4ed6ee16a54062e95b2938536a7d95add7a20
 s
 Cuser-events/src/main/java/com/gabrielduarte/domain/dto/UserDTO.java,3/f/3f7c79d7ca4429df79ea4525305f74246f822430

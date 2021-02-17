@@ -3,6 +3,7 @@ package com.gabrielduarte.service;
 import com.gabrielduarte.domain.UserEntity;
 import com.gabrielduarte.domain.dto.UserDTO;
 import com.gabrielduarte.feign.SwapiClient;
+import com.gabrielduarte.mapper.UserMapper;
 import com.gabrielduarte.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,14 +13,25 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepository userRepository;
-
     private final SwapiClient swapiClient;
+    private final UserMapper mapper;
 
-    public void saveOrUpdate(final String id) {
+    public void save(final String id) {
         final UserDTO dto = swapiClient.getCharacterById(id);
-        final UserEntity entity = UserDTO.toEntity(dto, id);
+        final UserEntity entity = mapper.toEntity(dto, id);
 
         userRepository.save(entity);
     }
-//metodo p criar e atualizar
+
+    public void update(final String id) {
+        final UserDTO dto = swapiClient.getCharacterById(id);
+        final UserEntity entity = mapper.toEntity(dto, id);
+
+        userRepository.save(entity);
+    }
+
+    public boolean userExists(final String id) {
+        return userRepository.existsById(Long.valueOf(id));
+    }
+
 }

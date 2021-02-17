@@ -11,8 +11,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class UserConsumer {
-//created character consumer - nome do que aconteceu
+public class CreatedCharacterConsumer {
     @Value("${topic.name.consumer}")
     private String topicName;
 
@@ -20,8 +19,13 @@ public class UserConsumer {
 
     @KafkaListener(topics = "${topic.name.consumer}", groupId = "user-events")
     public void consume(ConsumerRecord<String, String> message) {
-        //log
-        userService.saveOrUpdate(message.value());
+        String id = message.value();
+
+        if(userService.userExists(id)) {
+            userService.save(id);
+        } else {
+            userService.update(id);
+        }
     }
 
 }

@@ -7,14 +7,10 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.16/6dc192c7f93ec1853f70d59d8a6dcf94eb42866/lombok-1.18.16.jar" />
         </processorPath>
-        <module name="microservices-poc.user-api.main" />
         <module name="microservices-poc.user-events.main" />
+        <module name="microservices-poc.user-api.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="user-api" target="13" />
-      <module name="user-api_main" target="13" />
-      <module name="user-api_test" target="13" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8" />
   </component>
 </project>
